@@ -41,6 +41,15 @@ app.post('/inputcheats', (req, res) => {
     })
 })
 
+app.delete('/', (req, res) => {
+  const id = req.body.id
+  console.log(id)
+  knex('user_inputs')
+    .where('id', id)
+    .del()
+    .then(res.end())
+})
+
 // GETTING DATA USING LOCAL STORAGE
 // app.get('/', (req, res) => {
 //   fs.readFile(locallyStoredInputs, 'utf8', (err, data) => {
