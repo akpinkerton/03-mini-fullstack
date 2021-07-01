@@ -63,3 +63,8 @@
   text-align: center;
   margin: 10px;
 }
+
+.photo {
+  height: 50px;
+  width: 50px;
+}
