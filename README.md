@@ -45,7 +45,10 @@ Create a coding cheatsheet hub
 ### Stretch goals
 - [X] Add a dropdown selecter
 - [ ] Use drop down to search
+    - Status: buttons click and update state, havent connected to filter data based on yet
 
 
 #### Styling Points
 - [X] Click on name to display description
+  - [ ] toggle view icon
+    - status: button clicks to toggle the view of description but does not toggle icon on button
