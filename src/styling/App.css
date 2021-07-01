@@ -8,6 +8,8 @@
   box-shadow: 5px 5px 5px 5px black;
 }
 
+
+
 .form-holder {
       display: flex;
       justify-content: center;
@@ -48,10 +50,6 @@
   background-color: #7952B3;
   color: #fff;
 
-}
-
-.hidden{
-  display: none;
 }
 
 

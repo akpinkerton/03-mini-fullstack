@@ -50,7 +50,6 @@ Create a coding cheatsheet hub
 - [X] Add a dropdown selecter
 - [ ] Use drop down to organize inputs into containers
 - [ ] Seperate data into seperate pages OR a search function
-- [ ] Deleting a cheat from the list performs two identical fetch requests
 
 
 #### Styling Points
