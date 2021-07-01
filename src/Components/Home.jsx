@@ -71,10 +71,8 @@ function RenderFullList() {
                   <p className={`card-text description${item.id} hidden`}>{item.description}</p>
                   <div className="container d-flex justify-content-between">
                     <button className={`btn btn-outline-light box${item.id} fa`} type="checkbox" key={item.id} onClick={() => {
-                      document.querySelector(`.description${item.id}`).classList.toggle(`hidden`)
-                    }
-                    }>
-                        <span><i className="fas fa-eye"></i></span>
+                      document.querySelector(`.description${item.id}`).classList.toggle(`hidden`) } }>
+                        {true ? <span>View/Hide details</span> : <span>YOU FIXED THE BUTTON YAY! </span>}
                     </button>
                     {/* <button className="btn btn-outline-light" type="checkbox" key={item.id} onClick={() => setDisplay}>{display ? <span><i className="fas fa-rocket"></i></span> : <span><i className="fas fa-heart-broken"></i></span>}</button> */}
                     <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><i className="fa fa-trash"></i></button>
@@ -111,10 +109,8 @@ function RenderPartialList() {
                     <p className={`card-text description${item.id} hidden`}>{item.description}</p>
                     <div className="container d-flex justify-content-between">
                       <button className={`btn btn-outline-light box${item.id} fa`} type="checkbox" key={item.id} onClick={() => {
-                        document.querySelector(`.description${item.id}`).classList.toggle(`hidden`)
-                      }
-                      }>
-                          <span><i className="fas fa-eye"></i></span>
+                        document.querySelector(`.description${item.id}`).classList.toggle(`hidden`) } }>
+                          <span>View/Hide Details</span>
                       </button>
                       {/* <button className="btn btn-outline-light" type="checkbox" key={item.id} onClick={() => setDisplay}>{display ? <span><i className="fas fa-rocket"></i></span> : <span><i className="fas fa-heart-broken"></i></span>}</button> */}
                       <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><i className="fa fa-trash"></i></button>
