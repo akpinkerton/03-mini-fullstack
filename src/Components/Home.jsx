@@ -1,5 +1,6 @@
 import{useState, useEffect, useCallback} from'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom'; //router is even though not used
+import trash from '../Local-storage/trash.png'
 
 
 function Home () {
@@ -75,7 +76,7 @@ function RenderFullList() {
                         {true ? <span>View/Hide details</span> : <span>YOU FIXED THE BUTTON YAY! </span>}
                     </button>
                     {/* <button className="btn btn-outline-light" type="checkbox" key={item.id} onClick={() => setDisplay}>{display ? <span><i className="fas fa-rocket"></i></span> : <span><i className="fas fa-heart-broken"></i></span>}</button> */}
-                    <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><i className="fa fa-trash"></i></button>
+                    <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><img className='delete' src={trash}/></button>
                   </div>
               </div>
           </div>
