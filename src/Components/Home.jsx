@@ -91,7 +91,7 @@ function RenderFullList() {
 function RenderPartialList() {
   return (
     <div>
-      <h5>Cheets for: {Object.entries(categories).filter(item => item[1] === true).map(item => <>{item[0]}, </>)} </h5>
+      <h5>Cheets for: {Object.entries(categories).filter(item => item[1] === true).map(item => <>{item[0]} </>)} </h5>
         <div className="row">
          {list.filter(item => categories[item.category] === true)
             .map(item =>
