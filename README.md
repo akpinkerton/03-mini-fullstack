@@ -39,18 +39,13 @@ Create a coding cheatsheet hub
     - [X] Title
     - [X] Description
     - [X] Category
-      - dropdown with a list of exisiting
-      - add button and input to add a new category to the list
-
-- Some Category Page
-  - All input titles in that category
-    - click to display details
+      - [X] dropdown with a list of exisiting
+      - [ ] add button and input to add a new category to the list
 
 ### Stretch goals
 - [X] Add a dropdown selecter
-- [ ] Use drop down to organize inputs into containers
-- [ ] Seperate data into seperate pages OR a search function
+- [ ] Use drop down to search
 
 
 #### Styling Points
-- [ ] Click on name to display description
+- [X] Click on name to display description

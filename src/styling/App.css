@@ -8,8 +8,6 @@
   box-shadow: 5px 5px 5px 5px black;
 }
 
-
-
 .form-holder {
       display: flex;
       justify-content: center;
@@ -17,7 +15,7 @@
 }
 
 .btn.react{
-  background-color: #125D98;
+  background-color:  #125D98;
   color: #fff;
 }
 
