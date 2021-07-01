@@ -54,3 +54,12 @@
 .hidden{
   display: none;
 }
+
+.search-buttons{
+  border: 2px solid grey;
+  padding: 10px, 10px, 10px, 10px;
+  width: 90vw;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}

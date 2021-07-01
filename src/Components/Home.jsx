@@ -28,12 +28,8 @@ function listCheats() {
 }
 
 useEffect(() => {
-listCheats()
-}, [categories])
-
-useEffect(() => {
   listCheats()
-  // console.log(cards.classList);
+
 }, [currentList])
 
 useEffect(() => {
@@ -57,7 +53,7 @@ const deleteItem = (id) => {
 function RenderFullList() {
   return(
   <div>
-    <h5>All cheats:</h5>
+    <h5>ALL YOUR CHEETS:</h5>
       <div className="row">
         {list.map(item =>
           <div className="col-sm-4 py-2">
@@ -78,7 +74,7 @@ function RenderFullList() {
                       document.querySelector(`.description${item.id}`).classList.toggle(`hidden`)
                     }
                     }>
-                        {item ? <span><i className="fas fa-eye-slash"></i></span> : <span><i className="far fa-eye"></i></span>}
+                        <span><i className="fas fa-eye"></i></span>
                     </button>
                     {/* <button className="btn btn-outline-light" type="checkbox" key={item.id} onClick={() => setDisplay}>{display ? <span><i className="fas fa-rocket"></i></span> : <span><i className="fas fa-heart-broken"></i></span>}</button> */}
                     <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><i className="fa fa-trash"></i></button>
@@ -95,10 +91,11 @@ function RenderFullList() {
 function RenderPartialList() {
   return (
     <div>
-      <h5>All cheats:</h5>
+      <h5>Cheets for: {Object.entries(categories).filter(item => item[1] === true).map(item => <>{item[0]}, </>)} </h5>
         <div className="row">
          {list.filter(item => categories[item.category] === true)
             .map(item =>
+
           <div className="col-sm-4 py-2">
             <div className="card text-white" style={{ backgroundColor:
             item.category === 'react' ? "#125D98" :
@@ -117,7 +114,7 @@ function RenderPartialList() {
                         document.querySelector(`.description${item.id}`).classList.toggle(`hidden`)
                       }
                       }>
-                          {item ? <span><i className="fas fa-eye-slash"></i></span> : <span><i className="far fa-eye"></i></span>}
+                          <span><i className="fas fa-eye"></i></span>
                       </button>
                       {/* <button className="btn btn-outline-light" type="checkbox" key={item.id} onClick={() => setDisplay}>{display ? <span><i className="fas fa-rocket"></i></span> : <span><i className="fas fa-heart-broken"></i></span>}</button> */}
                       <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><i className="fa fa-trash"></i></button>
@@ -138,54 +135,48 @@ function RenderPartialList() {
         <div className="row">
             <div className="form-holder">
                 <div className="form-items">
-                    <form>
+                    <form className="search-buttons">
                         <div className="col-md-12">
-                            <select className="form-select mt-3">
-                                  <option selected disabled value="">Category</option>
-                                  <option value="react">React</option>
-                                  <option value="git">Git</option>
-                                  <option value="javascript">JavaScript</option>
-                                  <option value="html">HTML</option>
-                                  <option value="styling">Styling</option>
-                                  <option value="sql">SQL</option>
-                            </select>
-                        </div>
-
-                        <div className="col-md-12 mt-3">
                             <input type="checkbox" className="btn-check" name="category" onChange={() => {
                               setCategories({...categories, react: !categories.react})
                             }}id="react"/>
-                            <label className="btn btn react" aria-pressed="true" for="react">react</label>
+                            <label className="btn btn-light react"  for="react">react</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
-                              setCategories({...categories, react: !categories.git})
+                              setCategories({...categories, git: !categories.git})
                               }} name="category" id="git"/>
                             <label className="btn btn-light git" for="git">git</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
-                              setCategories({...categories, react: !categories.javascript})
+                              setCategories({...categories, javascript: !categories.javascript})
                               }} name="category" id="javascript"/>
                             <label className="btn btn-light javascript" for="javascript">javascript</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
-                              setCategories({...categories, react: !categories.html})
+                              setCategories({...categories, html: !categories.html})
                               }} name="category" id="html"/>
                             <label className="btn btn-light html" aria-pressed="true" for="html">html</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
-                              setCategories({...categories, react: !categories.styling})
+                              setCategories({...categories, styling: !categories.styling})
                               }} name="category" id="styling"/>
                             <label className="btn btn-light styling" for="styling">styling</label>
 
-                            <input type="checkbox" className="btn-check" name="category" id="sql"/>
+                            <input type="checkbox" className="btn-check" onChange={() => {
+                              setCategories({...categories, sql: !categories.sql})
+                              }} name="category" id="sql"/>
                             <label className="btn btn-light sql" for="sql">sql</label>
 
-                            <input type="checkbox" className="btn-check" name="category" id="other"/>
+                            <input type="checkbox" className="btn-check" onChange={() => {
+                              setCategories({...categories, other: !categories.other})
+                              }} name="category" id="other"/>
                             <label className="btn btn-light other" for="other">other</label>
                         </div>
                     </form>
                 </div>
+
         </div>
+
     </div>
 
 

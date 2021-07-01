@@ -22,13 +22,13 @@ app.get('/', function(req, res) {
           'The data you are looking for could not be found. Please try again'
       })
     );
-    console.log("GET working")
+    console.log("GET req submitted")
 });
 
 app.post('/inputcheats', (req, res) => {
   console.log(`POST working`)
   // const fakeInput = {name: 'fake2', description:'fake descrip2'}
-  console.log("The bod: ", req.body)
+  console.log("New input: ", req.body)
 
 // INSERT INTO user_inputs (name, description) VALUES (name, description)
     knex('user_inputs')
