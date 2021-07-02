@@ -1,3 +1,21 @@
+## To run
+
+1. Fork and Clone Repo
+2. `npm install` at root of directory
+3. `npm start` at root to start react app on localhost 3000
+4. `cd` into 'src/server' and `npm start` to open server on localhost 3001
+5.  pull postgres from docker:
+  -  `docker exec -it <container-ID> bash`
+  -  `psql -U postgres`
+6. Create a database called `cheatsdb`
+  - `CREATE DATABASE cheatsdb;`
+7. Spin up knex in terminal from src/server path:
+  - `npx knex migrate:latest` will add a table to your DB
+  - ` npx knex seed:run ` will fill it with some initial values
+8. You can add 'cheets' to your library on the Add a Cheet page. Specify a categoru to file it or leave thhe category blank to file it in "Other"
+  - NOTE: After finising the project that was working smoothly, our DB crashed. When bringing back up, we noticed that it takes several submits to get the first item to display on the home page.
+9. On the home page, you can see all your logged cheats and filter them based on category.
+
 # Mini Full Stack Project
 This project is your first foray into full stack development!
 We want you to create a CRUD application that:
