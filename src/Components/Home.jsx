@@ -144,37 +144,37 @@ function Home() {
                 <input type="checkbox" className="btn-check" name="category" onChange={() => {
                   setCategories({ ...categories, react: !categories.react })
                 }} id="react" />
-                <label className="btn btn-react react" for="react">react</label>
+                <label className="btn btn react" for="react">react</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setCategories({ ...categories, git: !categories.git })
                 }} name="category" id="git" />
-                <label className="btn btn-git git" for="git">git</label>
+                <label className="btn btn git" for="git">git</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setCategories({ ...categories, javascript: !categories.javascript })
                 }} name="category" id="javascript" />
-                <label className="btn btn-js javascript" for="javascript">javascript</label>
+                <label className="btn btn javascript" for="javascript">javascript</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setCategories({ ...categories, html: !categories.html })
                 }} name="category" id="html" />
-                <label className="btn btn-html html" aria-pressed="true" for="html">html</label>
+                <label className="btn btn html" aria-pressed="true" for="html">html</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setCategories({ ...categories, styling: !categories.styling })
                 }} name="category" id="styling" />
-                <label className="btn btn-sty styling" for="styling">styling</label>
+                <label className="btn btn styling" for="styling">styling</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setCategories({ ...categories, sql: !categories.sql })
                 }} name="category" id="sql" />
-                <label className="btn btn-sql sql" for="sql">sql</label>
+                <label className="btn btn sql" for="sql">sql</label>
 
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setCategories({ ...categories, other: !categories.other })
                 }} name="category" id="other" />
-                <label className="btn btn-other other" for="other">other</label>
+                <label className="btn btn other" for="other">other</label>
               </div>
             </form>
           </div>
