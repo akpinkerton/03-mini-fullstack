@@ -1,4 +1,4 @@
-## To run
+##  💽 To run
 
 1. Fork and Clone Repo
 2. `npm install` at root of directory
@@ -13,10 +13,10 @@
   - `npx knex migrate:latest` will add a table to your DB
   - ` npx knex seed:run ` will fill it with some initial values
 8. You can add 'cheets' to your library on the Add a Cheet page. Specify a categoru to file it or leave thhe category blank to file it in "Other"
-  - NOTE: After finising the project that was working smoothly, our DB crashed. When bringing back up, we noticed that it takes several submits to get the first item to display on the home page.
+  - NOTE: After finising the project that was working smoothly, our DB crashed. When bringing back up, we noticed that it OCCASIONALLY takes several submits to get the first item to display on the home page.
 9. On the home page, you can see all your logged cheats and filter them based on category.
 
-# Mini Full Stack Project
+# 🥞 Mini Full Stack Project
 This project is your first foray into full stack development!
 We want you to create a CRUD application that:
 - stores some user-generated data in a database
@@ -28,11 +28,11 @@ This application should have:
 - Express server
 - PostgreSQL database.
 
-## App Plan
+## 🧀 App Plan
 
 Create a coding cheatsheet hub
 
-### Initial Must Dos
+### ✅ Initial Must Dos
 - [X] Inputs into a field
 - [X] Push Inputs into a list
 - [X] Post inputs to server using Express
@@ -42,7 +42,7 @@ Create a coding cheatsheet hub
 - [X] GET data from '/' to display
 - [X] replace local storage .json file with database using knex
 
-#### App Layout
+#### 📱 App Layout
 - Home Page
   - Navbar
     - [X] Links to input sheet
@@ -60,13 +60,11 @@ Create a coding cheatsheet hub
       - [X] dropdown with a list of exisiting
       - [ ] add button and input to add a new category to the list
 
-### Stretch goals
+### 🏋🏼‍♀️ Stretch goals
 - [X] Add a dropdown selecter
-- [ ] Use drop down to search
-    - Status: buttons click and update state, havent connected to filter data based on yet
+- [X] Use buttons to filter based on category
 
-
-#### Styling Points
+#### 💄 Styling Points
 - [X] Click on name to display description
   - [ ] toggle view icon
     - status: button clicks to toggle the view of description but does not toggle icon on button
