@@ -3,6 +3,24 @@
   font-size: 5vw;
 }
 
+  @media screen and (min-width: 1000px) {
+    .cheat-card{
+      font-size: 5vw;
+    }
+  }
+  @media screen and (max-width: 1000px) and (min-width: 800px) {
+    .cheat-card{
+      font-size: 4vw;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .cheat-card{
+      font-size: 3vw;
+    }
+  }
+
+
+
 .card {
   border-radius: 15px;
   box-shadow: 5px 5px 5px 5px black;
@@ -14,41 +32,63 @@
       text-rendering: optimizeLegibility;
 }
 
+
+
+
+
+
+.btn-check+.btn{
+  filter: contrast(100%);
+  color: #fff;
+}
+
+
+.btn-check:checked+.btn{
+  opacity: 100%;
+}
+
+
 .btn.react{
   background-color:  #125D98;
-  color: #fff;
+  opacity: 50%;
 }
 
 .btn.git{
   background-color: #52006A;
-  color: #fff;
-
+  opacity: 50%;
 }
 .btn.javascript{
   background-color: rgb(255, 169, 0);
-  color: #fff;
-
+  opacity: 50%;
 }
 .btn.html{
   background-color: rgb(255, 118, 0);
-  color: #fff;
-
+  opacity: 50%;
 }
 .btn.styling{
   background-color: #F21170;
-  color: #fff;
-
+  opacity: 50%;
 }
 .btn.sql{
   background-color: #CD113B;
-  color: #fff;
-
+  opacity: 50%;
 }
 .btn.other{
   background-color: #7952B3;
-  color: #fff;
-
+  opacity: 50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .hidden{
@@ -70,5 +110,11 @@
 }
 
 .delete {
-  height: 50px;
+  max-height: 50px;
+}
+
+
+.btn-check:checked+.btn-new{
+  color: #fff;
+  background-color: #ca0a90;
 }

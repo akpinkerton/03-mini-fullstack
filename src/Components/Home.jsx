@@ -61,7 +61,7 @@ function RenderFullList() {
           <div className="card text-white" style={{ backgroundColor:
           item.category === 'react' ? "#125D98" :
           item.category === 'git' ? "#52006A" :
-          item.category === 'javascript' ? "rgb(255, 169, 0)" :
+          item.category === 'javascript' ? "#ffa900" :
           item.category === 'html' ? "rgb(255, 118, 0)" :
           item.category === 'styling' ? "#F21170" :
           item.category === 'sql' ? "#CD113B" :
@@ -71,7 +71,7 @@ function RenderFullList() {
                   <p className="card-text">{item.name}</p>
                   <p className={`card-text description${item.id} hidden`}>{item.description}</p>
                   <div className="container d-flex justify-content-between">
-                    <button className={`btn btn-outline-light box${item.id} fa`} type="checkbox" key={item.id} onClick={() => {
+                    <button className={`btn btn-outline-light box${item.id}`} type="checkbox" key={item.id} onClick={() => {
                       document.querySelector(`.description${item.id}`).classList.toggle(`hidden`) } }>
                         {true ? <span>View/Hide details</span> : <span>YOU FIXED THE BUTTON YAY! </span>}
                     </button>
@@ -137,37 +137,37 @@ function RenderPartialList() {
                             <input type="checkbox" className="btn-check" name="category" onChange={() => {
                               setCategories({...categories, react: !categories.react})
                             }}id="react"/>
-                            <label className="btn btn-light react"  for="react">react</label>
+                            <label className="btn btn-react react"  for="react">react</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
                               setCategories({...categories, git: !categories.git})
                               }} name="category" id="git"/>
-                            <label className="btn btn-light git" for="git">git</label>
+                            <label className="btn btn-git git" for="git">git</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
                               setCategories({...categories, javascript: !categories.javascript})
                               }} name="category" id="javascript"/>
-                            <label className="btn btn-light javascript" for="javascript">javascript</label>
+                            <label className="btn btn-js javascript" for="javascript">javascript</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
                               setCategories({...categories, html: !categories.html})
                               }} name="category" id="html"/>
-                            <label className="btn btn-light html" aria-pressed="true" for="html">html</label>
+                            <label className="btn btn-html html" aria-pressed="true" for="html">html</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
                               setCategories({...categories, styling: !categories.styling})
                               }} name="category" id="styling"/>
-                            <label className="btn btn-light styling" for="styling">styling</label>
+                            <label className="btn btn-sty styling" for="styling">styling</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
                               setCategories({...categories, sql: !categories.sql})
                               }} name="category" id="sql"/>
-                            <label className="btn btn-light sql" for="sql">sql</label>
+                            <label className="btn btn-sql sql" for="sql">sql</label>
 
                             <input type="checkbox" className="btn-check" onChange={() => {
                               setCategories({...categories, other: !categories.other})
                               }} name="category" id="other"/>
-                            <label className="btn btn-light other" for="other">other</label>
+                            <label className="btn btn-other other" for="other">other</label>
                         </div>
                     </form>
                 </div>
