@@ -1,4 +1,4 @@
-.cheat-card{
+.cheat-card.card-title{
   opacity: 0.4;
   font-size: 5vw;
 }
@@ -29,12 +29,7 @@
 .form-holder {
       display: flex;
       justify-content: center;
-      text-rendering: optimizeLegibility;
 }
-
-
-
-
 
 
 .btn-check+.btn{
@@ -46,7 +41,6 @@
 .btn-check:checked+.btn{
   opacity: 100%;
 }
-
 
 .btn.react{
   background-color:  #125D98;
@@ -81,14 +75,22 @@
 
 
 
+.btn.view {
+  border: 2px solid rgba(33, 37, 41, 0.2);
+  opacity: 100%;
+  margin: 0;
+}
 
+.btn.view:hover {
+  color: #fff;
+  border-color: #212520;
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.3);
+}
 
-
-
-
-
-
-
+.btn.view:focus, .btn.view.focus{
+  box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.5);
+  filter:hue-rotate(100deg);
+}
 
 
 .hidden{
@@ -99,8 +101,7 @@
   border: 2px solid grey;
   padding: 10px, 10px, 10px, 10px;
   width: 90vw;
-  padding: 10px;
-  text-align: center;
+  padding: 30px 10px;
   margin: 10px;
 }
 
@@ -110,11 +111,10 @@
 }
 
 .delete {
-  max-height: 50px;
+  max-height: 40px;
+
 }
 
-
-.btn-check:checked+.btn-new{
-  color: #fff;
-  background-color: #ca0a90;
+.delTxt {
+  font-size: 9px;
 }

@@ -72,14 +72,14 @@ function Home() {
                   <h3 className="card-title cheat-card">{item.category ? item.category : 'Other'}</h3>
                   <p className="card-text">{item.name}</p>
                   <p className={`card-text description${item.id} hidden`}>{item.description}</p>
-                  <div className="container d-flex justify-content-between">
-                    <button className={`btn btn-outline-light box${item.id}`} type="checkbox" key={item.id} onClick={() => {
+                  <div className="container p-0 d-flex justify-content-between">
+                    <button className={`btn btn view ${item.category} box${item.id}`} type="checkbox" key={item.id} onClick={() => {
                       document.querySelector(`.description${item.id}`).classList.toggle(`hidden`)
                     }}>
                       {true ? <span>View/Hide details</span> : <span>YOU FIXED THE BUTTON YAY! </span>}
                     </button>
                     {/* <button className="btn btn-outline-light" type="checkbox" key={item.id} onClick={() => setDisplay}>{display ? <span><i className="fas fa-rocket"></i></span> : <span><i className="fas fa-heart-broken"></i></span>}</button> */}
-                    <button className="btn btn-outline-light" onClick={(() => deleteItem(item.id))}><img className='delete' src={trash} /></button>
+                    <button className="btn btn view d-flex flex-column" onClick={(() => deleteItem(item.id))}><img className='delete' src={trash} /><span className="delTxt">delete</span></button>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ function Home() {
                     <h3 className="card-title cheat-card">{item.category ? item.category : 'Other'}</h3>
                     <p className="card-text">{item.name}</p>
                     <p className={`card-text description${item.id} hidden`}>{item.description}</p>
-                    <div className="container d-flex justify-content-between">
+                    <div className="container p-0 d-flex justify-content-between">
                       <button className={`btn btn-outline-light box${item.id} fa`} type="checkbox" key={item.id} onClick={() => {
                         document.querySelector(`.description${item.id}`).classList.toggle(`hidden`)
                       }}>
